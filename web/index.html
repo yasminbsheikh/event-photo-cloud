@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo Cloud</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="cloud" class="layer"></div>
+  <div id="featured" class="layer"></div>
+
+  <button id="gear" type="button" aria-label="Settings">&#9881;</button>
+  <form id="panel" hidden>
+    <label for="kind">Photo source</label>
+    <select id="kind">
+      <option value="local">Local folder</option>
+      <option value="gphotos">Google Photos</option>
+      <option value="gdrive">Google Drive folder</option>
+      <option value="dropbox">Dropbox folder</option>
+    </select>
+
+    <div id="conn" hidden>
+      <span id="conn-text"></span>
+      <button id="conn-btn" type="button" class="secondary"></button>
+    </div>
+
+    <div id="path-group">
+      <label id="path-label" for="path">Photo folder</label>
+      <input id="path" type="text" autocomplete="off" spellcheck="false">
+      <label class="check"><input id="recursive" type="checkbox"> Include subfolders</label>
+    </div>
+
+    <button id="pick" type="button" hidden>Choose photos in Google Photos…</button>
+    <button id="submit" type="submit">Load / refresh</button>
+    <p id="status" role="status"></p>
+  </form>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

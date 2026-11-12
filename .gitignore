@@ -1,0 +1,30 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Secrets and personal data (these normally live in ~/.photocloud, outside the repo)
+credentials.json
+tokens.json
+.env
+.photocloud/
+
+# Photos and downloads
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.heic
+!web/**/*.png
+!docs/*.png
+*.zip
+*.patch
+
+# Editors / OS / logs
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+nohup.out
